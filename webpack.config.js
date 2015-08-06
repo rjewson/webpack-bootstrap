@@ -30,7 +30,12 @@ var config = {
     new Webpack.DefinePlugin({
       __DEV__: true
     }),
-    new ExtractTextPlugin("styles.css", { allChunks: true })
+    new ExtractTextPlugin("styles.css", { allChunks: true }),
+    new Webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "windows.jQuery": "jquery"
+        })
   ],
   resolve: {
     root:appPath
