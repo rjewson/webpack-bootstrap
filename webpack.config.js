@@ -10,7 +10,6 @@ var config = {
   devtool: 'eval-source-map',
   entry: {
     app:    ["webpack/hot/dev-server","./src/main.js"]
-    // styles: ["webpack/hot/dev-server","./src/styles.css"]
   },
   output: {
     path: buildPath,
@@ -19,9 +18,6 @@ var config = {
   },
   module: {
     loaders: [
-      // { test: /\.js$/,   loader: 'babel', exclude: [nodeModulesPath] }, 
-      // { test: /\.scss$/,  loader: 'style!css!sass' },
-      // { test: /\.css$/,  loader: ExtractTextPlugin.extract('css-loader') }
       { test: /\.scss$/,  loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap') }
     ]
   },
@@ -32,10 +28,10 @@ var config = {
     }),
     new ExtractTextPlugin("styles.css", { allChunks: true }),
     new Webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            "windows.jQuery": "jquery"
-        })
+      $: "jquery",
+      jQuery: "jquery",
+      "windows.jQuery": "jquery"
+    })
   ],
   resolve: {
     root:appPath

@@ -1,7 +1,7 @@
 {
-  "name": "hoteldemo",
+  "name": "webpack-bootstrap",
   "version": "0.0.0",
-  "description": "SDL Hotel demo site",
+  "description": "Project bootstrap",
   "main": "index.html",
   "scripts": {
     "dev": "webpack-dev-server --config ./webpack.config.js --hot --progress --port 3000 --colors --content-base build",
