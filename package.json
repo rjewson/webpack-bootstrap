@@ -1,0 +1,25 @@
+{
+  "name": "hoteldemo",
+  "version": "0.0.0",
+  "description": "SDL Hotel demo site",
+  "main": "index.html",
+  "scripts": {
+    "dev": "webpack-dev-server --config ./webpack.config.js --hot --progress --port 3000 --colors --content-base build",
+    "prod": "webpack -p --config ./webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "css-loader": "^0.15.6",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.10.5",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "devDependencies": {
+    "node-sass": "^3.2.0",
+    "sass-loader": "^1.0.4"
+  }
+}
